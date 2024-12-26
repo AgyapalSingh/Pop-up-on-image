@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .product-div {
+        display: flex;
+      }
+
+      .product-div button {
+        border: none;
+        background-color: transparent;
+        /* margin: 10px; */
+      }
+      .product-div img {
+        width: 200px;
+        cursor: pointer;
+      }
+
+      dialog {
+        /* width: 60vw;
+        height: auto; */
+        border: none;
+      }
+
+      dialog:-internal-dialog-in-top-layer::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .product-div-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .product-div-img img {
+        width: 50%;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #e2e2e2;
+        padding: 8px 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      .close-btn-div {
+        /* padding: 10px 20px; */
+        font-size: 18px;
+        font-size: 24px;
+        color: #17153b;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-div">
+      <button
+        onclick="document.querySelector('.dialog-adonia-bar').showModal();"
+      >
+        <img
+          src="https://unimarckpharma.com/wp-content/uploads/2024/08/ADONIA-BAR-3.png"
+        />
+      </button>
+
+      <button
+        onclick="document.querySelector('.dialog-clin-3-bar').showModal();"
+      >
+        <img
+          src="https://unimarckpharma.com/wp-content/uploads/2024/08/CLIN-3-BAR-4.png"
+        />
+      </button>
+    </div>
+
+    <dialog class="dialog-adonia-bar">
+      <div class="product-div-img">
+        <img
+          src="https://unimarckpharma.com/wp-content/uploads/2024/08/ADONIA-BAR-3.png"
+          alt="Preview Image"
+        />
+      </div>
+      <table>
+        <tr>
+          <th>Brand</th>
+          <td>AZIBEAT-500</td>
+        </tr>
+        <tr>
+          <th>Composition</th>
+          <td>Azithromycin 500mg</td>
+        </tr>
+        <tr>
+          <th>Pack</th>
+          <td>10x1x3 (monocarton)</td>
+        </tr>
+        <tr>
+          <th>Type</th>
+          <td>Blister</td>
+        </tr>
+        <tr>
+          <th>Category</th>
+          <td>
+            G.P, ENT, GYNAE, ORTHO, SURGEON, DERMA, PEDIATRIC, OPTHALMOLOGIST,
+            NEURO, GASTRO, UROLOGY, NEPHRO, RHEUMATOLOGY
+          </td>
+        </tr>
+      </table>
+
+      <button
+        class="close-btn-div"
+        onclick="document.querySelector('.dialog-adonia-bar').close();"
+      >
+        ×
+      </button>
+    </dialog>
+
+    <dialog class="dialog-clin-3-bar">
+      <div class="product-div-img">
+        <img
+          src="https://unimarckpharma.com/wp-content/uploads/2024/08/CLIN-3-BAR-4.png"
+          alt="Preview Image"
+        />
+      </div>
+
+      <table>
+        <tr>
+          <th>Brand</th>
+          <td>AZIBEAT-500</td>
+        </tr>
+        <tr>
+          <th>Composition</th>
+          <td>Azithromycin 500mg</td>
+        </tr>
+        <tr>
+          <th>Pack</th>
+          <td>10x1x3 (monocarton)</td>
+        </tr>
+        <tr>
+          <th>Type</th>
+          <td>Blister</td>
+        </tr>
+        <tr>
+          <th>Category</th>
+          <td>
+            G.P, ENT, GYNAE, ORTHO, SURGEON, DERMA, PEDIATRIC, OPTHALMOLOGIST,
+            NEURO, GASTRO, UROLOGY, NEPHRO, RHEUMATOLOGY
+          </td>
+        </tr>
+      </table>
+      <button
+        class="close-btn-div"
+        onclick="document.querySelector('.dialog-clin-3-bar').close();"
+      >
+        ×
+      </button>
+    </dialog>
+  </body>
+</html>
