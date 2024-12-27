@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prosto+One&family=Zen+Dots&display=swap");
+      /* font-family: "Poppins", sans-serif; */
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       .product-div {
         display: flex;
       }
@@ -12,7 +20,6 @@
       .product-div button {
         border: none;
         background-color: transparent;
-        /* margin: 10px; */
       }
       .product-div img {
         width: 150px;
@@ -20,8 +27,6 @@
       }
 
       dialog {
-        /* width: 60vw;
-        height: auto; */
         border: none;
       }
 
@@ -46,12 +51,13 @@
         border: 1px solid #e2e2e2;
         padding: 8px 12px;
         text-align: left;
+        font-weight: 300;
       }
       th {
         background-color: #f4f4f4;
+        font-weight: 500;
       }
       .close-btn-div {
-        /* padding: 10px 20px; */
         font-size: 18px;
         font-size: 24px;
         color: #17153b;
@@ -60,6 +66,40 @@
         position: absolute;
         top: 0px;
         right: 0px;
+      }
+
+      @media screen and (min-width: 768px) {
+        .dialog {
+          display: flex;
+          flex-direction: row;
+        }
+
+        dialog {
+          width: 60vw;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .product-div-img {
+          margin-bottom: 40px;
+        }
+        th,
+      td {
+        font-size: 14px;
+      }
+      }
+
+      .send-query-button {
+        display: flex;
+        justify-content: center;
+      }
+      .send-query-button a {
+        padding: 10px 30px;
+        background-color: #17153b;
+        color: white;
+        border-radius: 5px;
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: 14px;
       }
     </style>
   </head>
@@ -83,85 +123,97 @@
     </div>
 
     <dialog class="dialog-adonia-bar">
-      <div class="product-div-img">
-        <img
-          src="https://unimarckpharma.com/wp-content/uploads/2024/08/ADONIA-BAR-3.png"
-          alt="Preview Image"
-        />
-      </div>
-      <table>
-        <tr>
-          <th>Brand</th>
-          <td>AZIBEAT-500</td>
-        </tr>
-        <tr>
-          <th>Composition</th>
-          <td>Azithromycin 500mg</td>
-        </tr>
-        <tr>
-          <th>Pack</th>
-          <td>10x1x3 (monocarton)</td>
-        </tr>
-        <tr>
-          <th>Type</th>
-          <td>Blister</td>
-        </tr>
-        <tr>
-          <th>Category</th>
-          <td>
-            G.P, ENT, GYNAE, ORTHO, SURGEON, DERMA, PEDIATRIC, OPTHALMOLOGIST,
-            NEURO, GASTRO, UROLOGY, NEPHRO, RHEUMATOLOGY
-          </td>
-        </tr>
-      </table>
+      <div class="dialog">
+        <div class="product-div-img">
+          <img
+            src="https://unimarckpharma.com/wp-content/uploads/2024/08/ADONIA-BAR-3.png"
+            alt="Preview Image"
+          />
+        </div>
+        <table>
+          <tr>
+            <th>Brand</th>
+            <td>AZIBEAT-500</td>
+          </tr>
+          <tr>
+            <th>Composition</th>
+            <td>Azithromycin 500mg</td>
+          </tr>
+          <tr>
+            <th>Pack</th>
+            <td>10x1x3 (monocarton)</td>
+          </tr>
+          <tr>
+            <th>Type</th>
+            <td>Blister</td>
+          </tr>
+          <tr>
+            <th>Category</th>
+            <td>
+              G.P, ENT, GYNAE, ORTHO, SURGEON, DERMA, PEDIATRIC, OPTHALMOLOGIST,
+              NEURO, GASTRO, UROLOGY, NEPHRO, RHEUMATOLOGY
+            </td>
+          </tr>
+        </table>
 
-      <button
-        class="close-btn-div"
-        onclick="document.querySelector('.dialog-adonia-bar').close();"
-      >
-        ×
-      </button>
+        <button
+          class="close-btn-div"
+          onclick="document.querySelector('.dialog-adonia-bar').close();"
+        >
+          ×
+        </button>
+      </div>
+
+      <div class="send-query-button">
+        <a href="https://unimarckpharma.com/contact-us/">Send Query</a>
+      </div>
     </dialog>
 
     <dialog class="dialog-clin-3-bar">
-      <div class="product-div-img">
-        <img
-          src="https://unimarckpharma.com/wp-content/uploads/2024/08/CLIN-3-BAR-4.png"
-          alt="Preview Image"
-        />
+      <div class="dialog">
+        <div class="product-div-img">
+          <img
+            src="https://unimarckpharma.com/wp-content/uploads/2024/08/CLIN-3-BAR-4.png"
+            alt="Preview Image"
+          />
+        </div>
+
+        <table>
+          <tr>
+            <th>Brand</th>
+            <td>AZIBEAT-500</td>
+          </tr>
+          <tr>
+            <th>Composition</th>
+            <td>Azithromycin 500mg</td>
+          </tr>
+          <tr>
+            <th>Pack</th>
+            <td>10x1x3 (monocarton)</td>
+          </tr>
+          <tr>
+            <th>Type</th>
+            <td>Blister</td>
+          </tr>
+          <tr>
+            <th>Category</th>
+            <td>
+              G.P, ENT, GYNAE, ORTHO, SURGEON, DERMA, PEDIATRIC, OPTHALMOLOGIST,
+              NEURO, GASTRO, UROLOGY, NEPHRO, RHEUMATOLOGY
+            </td>
+          </tr>
+        </table>
+        <button
+          class="close-btn-div"
+          onclick="document.querySelector('.dialog-clin-3-bar').close();"
+        >
+          ×
+        </button>
       </div>
 
-      <table>
-        <tr>
-          <th>Brand</th>
-          <td>AZIBEAT-500</td>
-        </tr>
-        <tr>
-          <th>Composition</th>
-          <td>Azithromycin 500mg</td>
-        </tr>
-        <tr>
-          <th>Pack</th>
-          <td>10x1x3 (monocarton)</td>
-        </tr>
-        <tr>
-          <th>Type</th>
-          <td>Blister</td>
-        </tr>
-        <tr>
-          <th>Category</th>
-          <td>
-            G.P, ENT, GYNAE, ORTHO, SURGEON, DERMA, PEDIATRIC, OPTHALMOLOGIST,
-            NEURO, GASTRO, UROLOGY, NEPHRO, RHEUMATOLOGY
-          </td>
-        </tr>
-      </table>
-      <button
-        class="close-btn-div"
-        onclick="document.querySelector('.dialog-clin-3-bar').close();"
-      >
-        ×
-      </button>
+      <div class="send-query-button">
+        <a href="https://unimarckpharma.com/contact-us/">Send Query</a>
+      </div>
     </dialog>
   </body>
 </html>
